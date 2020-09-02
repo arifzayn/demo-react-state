@@ -1,21 +1,21 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { useState } from "react";
+// import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  const [isLit, setLit] = useState(true);
+  let [temp, setTemp] = useState(22);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://twitter.com/zayn_css"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Arif Zain Twitter
-        </a>
-      </header>
+    <div className={`room ${isLit ? "lit" : "dark"}`}>
+      This room is <span>{isLit ? "lit" : "dark"}</span>
+      <br />
+      Room Temperature: <span>{temp}°C</span>
+      <br />
+      <button onClick={() => setLit(!isLit)}>Flip</button>
+      <button onClick={() => setLit(true)}>ON</button>
+      <button onClick={() => setLit(false)}>OFF</button>
+      <button onClick={() => setTemp(++temp)}>+</button>
+      <button onClick={() => setTemp(--temp)}>-</button>
     </div>
   );
 }
