@@ -18,6 +18,9 @@ body,
   background-color: black;
   color: white;
   border-color: white;
+  border-right: none;
+  border-left: none;
+  border-top: none;
 }
 
 span {
@@ -31,4 +34,9 @@ button {
   padding: 20px;
   font-family: monospace;
   border-radius: 10%;
+  border-color: black;
+  background-color: white;
+  border-right: none;
+  border-left: none;
+  border-top: none;
 }
